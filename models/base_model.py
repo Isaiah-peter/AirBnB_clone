@@ -13,13 +13,13 @@ class BaseModel:
             for keys, value in kwargs.items():
                 if keys != '__class__':
                     if keys == 'created_at' or keys == 'updated_at':
-                        self.__dict__[keys] = datetime.datetime.fromisoformat(value)
+                        self.__dict__[keys] = datetime.fromisoformat(value)
                     else:
                         self.__dict__[keys] = value
         if kwargs == {}:
             self.id = str(uuid.uuid4())
-            self.created_at = datetime.datetime.now()
-            self.updated_at = datetime.datetime.now()
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
             self.my_number = 98
             self.name = "My First Model"
 
