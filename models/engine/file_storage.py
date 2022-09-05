@@ -21,7 +21,7 @@ class FileStorage:
     def reload(self):
         if os.path.isfile(self.__file_path):
             with open(self.__file_path, "r") as f:
-                json.load(f)
+                self.__objects = json.load(f)
         else:
             print("worked")
             return
