@@ -27,8 +27,4 @@ class FileStorage:
             with open(self.__file_path, "r") as f:
                 jb = json.load(f)
                 for key in jb:
-                    self.__objects[key] = classes[jb[key]
-                                                  ["__classes__"]](**jb[key])
-        else:
-            print("worked")
-            return
+                    self.__objects[key] = classes[jb[key]["__class__"]](**jb[key])
