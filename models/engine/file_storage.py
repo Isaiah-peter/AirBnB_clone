@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 import json
 import os
+from models.base_model import BaseModel
+
+classes = {"BaseModel": BaseModel}
+
 
 class FileStorage:
     __file_path = "file.json"
@@ -11,17 +15,20 @@ class FileStorage:
 
     def new(self, obj):
         key = "{}.{}".format(type(obj).__name__, obj.__dict__["id"])
-        FileStorage.__objects[key] = obj.__dict__
+        self.__objects[key] = obj
 
     def save(self):
         with open(self.__file_path, "w") as f:
-            my_dict = {key: value for key, value in self.__objects.items()}
+            my_dict = {key: value.to_dict() for key, value in self.__objects.items()}
             json.dump(my_dict, f)
 
     def reload(self):
         if os.path.isfile(self.__file_path):
             with open(self.__file_path, "r") as f:
-                self.__objects = json.load(f)
+                jb = json.load(f)
+                for key in jb:
+                    self.__objects[key] = classes[jb[key]
+                                                  ["__classes__"]](**jb[key])
         else:
             print("worked")
             return
