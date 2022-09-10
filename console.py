@@ -19,7 +19,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """don't run empty line"""
-        return
+        pass
 
 
 if __name__ == '__main__':
