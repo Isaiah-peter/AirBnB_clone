@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from models.base_model import BaseModel
 
 """ console """
 import cmd
@@ -18,8 +19,13 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """don't run empty line"""
-        pass
+        """return nothing"""
+        return False
+    
+    def do_create(self, arg):
+        """create new base model instance"""
+        model = BaseModel()
+        print(model)
 
 
 if __name__ == '__main__':

@@ -91,3 +91,75 @@
     font-size: 16px;
     font-weight: bold;
 }
+
+.places .amenities {
+    margin-top: 40px;
+}
+
+.places .amenities h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    text-align: left;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.places .amenities ul {
+    list-style: none;
+}
+
+.places .amenities ul li{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.amenities-image-1,
+.amenities-image-3,
+.amenities-image-2 {
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.amenities-image-1 {
+    background-image: url("../images/icon_tv.png");
+}
+
+.amenities-image-2 {
+    background-image: url("../images/icon_wifi.png");
+}
+
+.amenities-image-3 {
+    background-image: url("../images/icon_pets.png");
+}
+
+.reviews {
+    margin-top: 40px;
+}
+
+.places .reviews h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    text-align: left;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.reviews ul {
+    list-style: none;
+}
+
+.reviews ul li {
+    margin-bottom: 10px;
+}
+
+.reviews ul li h3 {
+    font-size: 14px;
+}
+
+.reviews ul li h3 {
+    font-size: 13px;
+}

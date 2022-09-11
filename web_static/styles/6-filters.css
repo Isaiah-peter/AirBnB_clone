@@ -25,7 +25,7 @@
     opacity: 90%;
 }
 
-.locations, .amenities {
+.locations, .amenitiess {
     height: 100%;
     width: 25%;
     display: flex;
@@ -41,20 +41,20 @@
 }
 
 .locations h3,
-.amenities h3 {
+.amenitiess h3 {
     font-weight: 600;
 }
 
 .locations h4,
-.amenities h4 {
+.amenitiess h4 {
     font-weight: 400;
     font-size: 14px;
 }
 
 .locations h3,
 .locations h4,
-.amenities h3,
-.amenities h4 {
+.amenitiess h3,
+.amenitiess h4 {
     margin-left: 20%;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .locations:hover .popover,
-.amenities:hover .popover {
+.amenitiess:hover .popover {
     display: block;
 }
 
